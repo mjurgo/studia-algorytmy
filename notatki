@@ -1,0 +1,3 @@
+Złożoność czasowa wyszukiwania binarnego wynosi O(log2n).
+
+Maksymalna liczba operacji to zawsze będzie właśnie log2n.
