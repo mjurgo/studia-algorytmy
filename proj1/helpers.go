@@ -1,7 +1,11 @@
 package proj1
 
 import (
+	"bufio"
 	"fmt"
+	"log"
+	"os"
+	"strconv"
 	"time"
 )
 
@@ -25,4 +29,20 @@ func TimeDiff(start time.Time, name string) {
 	// elapsed := time.Since(start).Seconds()
 	elapsed := time.Since(start)
 	fmt.Printf("%s wynosi %s.\n", name, elapsed)
+}
+
+func SaveArrayToFile(filename string, arry []int) {
+	file, err := os.Create("times.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	writer := bufio.NewWriter(file)
+	for _, line := range arry {
+		_, err := writer.WriteString(strconv.Itoa(line))
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+	writer.Flush()
 }
