@@ -6,6 +6,10 @@ import (
 )
 
 func Eratosthenes(n int) (bool, int) {
+	if n == 1 {
+		return false, 0
+	}
+
 	sqrtN := int(math.Sqrt(float64(n)))
 	s := make([]bool, sqrtN+1)
 

@@ -32,14 +32,14 @@ func TimeDiff(start time.Time, name string) {
 }
 
 func SaveArrayToFile(filename string, arry []int) {
-	file, err := os.Create("times.txt")
+	file, err := os.Create(filename)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	writer := bufio.NewWriter(file)
 	for _, line := range arry {
-		_, err := writer.WriteString(strconv.Itoa(line))
+		_, err := writer.WriteString(strconv.Itoa(line) + "\n")
 		if err != nil {
 			log.Fatal(err)
 		}
