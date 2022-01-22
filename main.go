@@ -4,20 +4,19 @@ import (
 	// "algorytmy/proj1"
 	// "algorytmy/proj2"
 	"algorytmy/proj3"
-	"fmt"
+	// "fmt"
 	// "fmt"
 	// "time"
 )
 
 func main() {
 	// PROJ3
-	// arry := []int{7, 5, 9, 6, 7, 8, 10}
-	// arry := []int{1, 6, 3, 5, 8, 4, 7, 2}
-	// arry := []int{1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17}
-	arry := proj3.VShapedArry(50)
+	// proj3.TestSort(proj3.InsertionSort, 50000)
+	// proj3.TestSort(proj3.SelectionSort, 50000)
+	proj3.TestSort(proj3.HeapSort, 50000)
 
-	proj3.HeapSort(arry)
-	fmt.Println(arry)
+	// proj3.EstTimeCompl(proj3.HeapSort, arry)
+	// fmt.Println(arry)
 
 	// PROJ1
 	// arryLen := proj1.Power(2, 20)
