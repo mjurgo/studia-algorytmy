@@ -1,22 +1,32 @@
 package main
 
 import (
-	"algorytmy/proj1"
+	// "algorytmy/proj1"
 	// "algorytmy/proj2"
+	"algorytmy/proj3"
+	"fmt"
 	// "fmt"
-	"time"
+	// "time"
 )
 
 func main() {
-	// PROJ1
-	arryLen := proj1.Power(2, 22)
-	arry := proj1.PopulateArray(arryLen)
+	// PROJ3
+	// arry := []int{7, 5, 9, 6, 7, 8, 10}
+	// arry := []int{1, 6, 3, 5, 8, 4, 7, 2}
+	arry := []int{1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17}
 
-	proj1.BinSearchMinTime(arry)
-	proj1.BinSearchMaxTime(arry)
-	start := time.Now()
-	proj1.BinSearchAvgTime(arry)
-	proj1.TimeDiff(start, "Całość czasu wykonania funkcji dla średniego przypadku")
+	proj3.HeapSort(arry)
+	fmt.Println(arry)
+
+	// PROJ1
+	// arryLen := proj1.Power(2, 20)
+	// arry := proj1.PopulateArray(arryLen)
+
+	// proj1.BinSearchMinTime(arry)
+	// proj1.BinSearchMaxTime(arry)
+	// start := time.Now()
+	// proj1.BinSearchAvgTime(arry)
+	// proj1.TimeDiff(start, "Całość czasu wykonania funkcji dla średniego przypadku")
 
 	// PROJ2
 	// arry := []int{100913, 1009139, 10091401, 100914061, 1009140611, 10091406133,

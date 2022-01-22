@@ -45,7 +45,6 @@ func BinSearchMinTime(arry []int) {
 		operationsCount += operations
 		iterationElapsed := time.Since(start)
 		elapsed += iterationElapsed
-		// fmt.Println(iterationElapsed)
 
 		if iterationElapsed < minTime {
 			minTime = iterationElapsed
@@ -100,7 +99,6 @@ func BinSearchAvgTime(arry []int) {
 	var minTime, maxTime time.Duration
 	minTime = 99 * time.Hour
 
-	// resultsArry := make([]int, 33)
 	var resultsArry []int
 
 	for i := 0; i < len(arry); i++ {
@@ -127,10 +125,7 @@ func BinSearchAvgTime(arry []int) {
 			resultsArry = append(resultsArry, int(sumForElem.Nanoseconds())/(iterations+2))
 		}
 	}
-	// SaveArrayToFile("results28.txt", resultsArry)
 	elapsed -= (minTime + maxTime)
-	// fmt.Printf("Before division elapsed = %s\n", elapsed)
-	// fmt.Println(len(arry))
 	elapsed = time.Duration(int(elapsed.Nanoseconds()) / (len(arry)*(iterations+2) - 2))
 
 	fmt.Printf("Średni czas wykonania: %s\n", elapsed)
