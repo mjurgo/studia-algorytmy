@@ -79,11 +79,4 @@ func TestSort(fn func([]int), n int) {
 
 	fmt.Printf("Średni czas wykonania %s dla tablicy V-kształtnej %d elementów to %s.\n",
 		runtime.FuncForPC(reflect.ValueOf(fn).Pointer()).Name(), n, EstTimeCompl(fn, vArry))
-
-	// fmt.Printf("Średni czas wykonania Insertion Sort dla tablicy losowej %d elementów to %s.\n",
-	// 	n, EstTimeCompl(InsertionSort, randArry))
-	// fmt.Printf("Średni czas wykonania Insertion Sort dla tablicy stałej %d elementów to %s.\n",
-	// 	n, EstTimeCompl(InsertionSort, constArry))
-	// fmt.Printf("Średni czas wykonania Insertion Sort dla tablicy V-kształtnej %d elementów to %s.\n",
-	// 	n, EstTimeCompl(InsertionSort, vArry))
 }

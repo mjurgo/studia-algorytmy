@@ -4,19 +4,14 @@ import (
 	// "algorytmy/proj1"
 	// "algorytmy/proj2"
 	"algorytmy/proj3"
-	// "fmt"
-	// "fmt"
-	// "time"
 )
 
 func main() {
 	// PROJ3
-	// proj3.TestSort(proj3.InsertionSort, 50000)
-	// proj3.TestSort(proj3.SelectionSort, 50000)
+	proj3.TestSort(proj3.InsertionSort, 50000)
+	proj3.TestSort(proj3.SelectionSort, 50000)
 	proj3.TestSort(proj3.HeapSort, 50000)
-
-	// proj3.EstTimeCompl(proj3.HeapSort, arry)
-	// fmt.Println(arry)
+	proj3.TestSort(proj3.CocktailSort, 100000)
 
 	// PROJ1
 	// arryLen := proj1.Power(2, 20)
@@ -27,35 +22,4 @@ func main() {
 	// start := time.Now()
 	// proj1.BinSearchAvgTime(arry)
 	// proj1.TimeDiff(start, "Całość czasu wykonania funkcji dla średniego przypadku")
-
-	// PROJ2
-	// arry := []int{100913, 1009139, 10091401, 100914061, 1009140611, 10091406133,
-	// 	100914061337, 1009140613399}
-
-	// for i := 0; i < len(arry); i++ {
-	// 	iterations := 10
-	// 	var elapsed time.Duration
-	// 	var minTime, maxTime time.Duration
-	// 	minTime = 99 * time.Hour
-	// 	var opCounter int
-	// 	var prime bool
-
-	// 	for j := 0; j < iterations+2; j++ {
-	// 		start := time.Now()
-	// 		prime, opCounter = proj2.Eratosthenes(arry[i])
-	// 		iterationElapsed := time.Since(start)
-	// 		elapsed += iterationElapsed
-
-	// 		if iterationElapsed < minTime {
-	// 			minTime = iterationElapsed
-	// 		}
-	// 		if iterationElapsed > maxTime {
-	// 			maxTime = iterationElapsed
-	// 		}
-	// 	}
-	// 	elapsed -= (minTime + maxTime)
-	// 	elapsed = time.Duration((elapsed.Nanoseconds() / int64(iterations)))
-
-	// 	fmt.Printf("%d jest liczbą pierwszą: %t | Średni czas wykonania wynosi: %d | Liczba operacji: %d\n", arry[i], prime, elapsed.Nanoseconds(), opCounter)
-	// }
 }

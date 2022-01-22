@@ -29,7 +29,7 @@ func SelectionSort(arry []int) {
 	}
 }
 
-func Heapify(arry []int, n int, i int) {
+func heapify(arry []int, n int, i int) {
 	largest := i
 	l := 2*i + 1 // left node
 	r := 2*i + 2 // right node
@@ -44,18 +44,50 @@ func Heapify(arry []int, n int, i int) {
 	if largest != i {
 		arry[i], arry[largest] = arry[largest], arry[i]
 
-		Heapify(arry, n, largest)
+		heapify(arry, n, largest)
 	}
 }
 
 func HeapSort(arry []int) {
 	for i := len(arry)/2 - 1; i >= 0; i-- {
-		Heapify(arry, len(arry), i)
+		heapify(arry, len(arry), i)
 	}
 
 	for i := len(arry) - 1; i > 0; i-- {
 		arry[0], arry[i] = arry[i], arry[0]
 
-		Heapify(arry, i, 0)
+		heapify(arry, i, 0)
+	}
+}
+
+func CocktailSort(arry []int) {
+	swapped := true
+	start := 0
+	end := len(arry) - 1
+
+	for swapped {
+		swapped = false
+
+		for i := start; i < end; i++ {
+			if arry[i] > arry[i+1] {
+				arry[i], arry[i+1] = arry[i+1], arry[i]
+				swapped = true
+			}
+		}
+
+		if !swapped {
+			break
+		}
+
+		end--
+
+		for i := end - 1; i >= start; i-- {
+			if arry[i] > arry[i+1] {
+				arry[i], arry[i+1] = arry[i+1], arry[i]
+				swapped = true
+			}
+		}
+
+		start++
 	}
 }
