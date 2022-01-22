@@ -13,7 +13,8 @@ func main() {
 	// PROJ3
 	// arry := []int{7, 5, 9, 6, 7, 8, 10}
 	// arry := []int{1, 6, 3, 5, 8, 4, 7, 2}
-	arry := []int{1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17}
+	// arry := []int{1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17}
+	arry := proj3.VShapedArry(50)
 
 	proj3.HeapSort(arry)
 	fmt.Println(arry)
